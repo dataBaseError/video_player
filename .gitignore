@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+
+# Executable Directory
+bin
+
+# Build Directory
+build
