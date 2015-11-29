@@ -57,6 +57,12 @@ class VideoAdjuster
 
 public:
 
+	static int mode;
+
+	static const int DEFAULT_SCREEN = 0;
+	static const int COLOR_SCREEN = 1;
+	static const int B_N_C = 2;
+
 	VideoAdjuster(std::string video_source);
 
 	void setup(int max_frame_pos);
@@ -64,6 +70,10 @@ public:
 	bool run();
 
 	static void set_pos(int position, void* data);
+
+	static void my_button_cb(int state, void* userdata);
+
+	bool read_frame(Mat &frame);
 
 private:
 	void move_frame_pos(int position);
